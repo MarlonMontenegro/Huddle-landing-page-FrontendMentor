@@ -1,0 +1,165 @@
+/* GOOGLE FONTS */
+
+/* FONTS HEADINGS (POPPINS 400, 600) FONT BODY (OPEN SANS 400) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,600;1,400&display=swap');
+
+
+:root {
+
+    /* COLORS PRIMARY*/
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --white-smoke: #f3f3f3;
+
+    /* FONTS */
+    --font-headings: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+
+/* GLOBAL STYLES */
+
+h1 {
+    font-family: var(--font-headings);
+}
+
+p {
+    font-family: var(--font-body);
+}
+
+body {
+    background-color: var(--Violet);
+    background-image: url("./images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--white-smoke);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+header img {
+    padding-top: 35px;
+    padding-left: 45px;
+    width: 125px;
+    height: auto;
+}
+
+/* MAIN SECTIONS */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 45px;
+    max-width: 1200px;
+    max-height: 50px;
+
+}
+
+.mockups-hero img {
+    height: 275px;
+    width: auto;
+    padding: 5px;
+
+}
+
+.hero {
+    padding-top: 5px;
+}
+
+.hero h1 {
+    font-size: 25px;
+    margin: 10px;
+}
+
+.hero p {
+    font-size: 11px;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+
+.social-icons svg {
+    width: 15px;
+    height: auto;
+}
+
+.social-icons ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+
+}
+
+.svg-icon{
+    fill: #f3f3f3;
+    transition: width 3ms ease;
+}
+
+.svg-icon:hover{
+    width: 18px;
+    height: auto;
+}
+
+.social-icons li svg {
+    color: red;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+
+
+/* BUTTON STYLE */
+
+.btn-register {
+    cursor: pointer;
+    font: var(--font-body);
+    border-radius: 20px;
+    border: 0;
+    font-size: 12px;
+    width: 120px;
+    padding: 8px;
+    color: var(--Violet);
+    transition: background-color 10ms ease;
+    margin: 10px;
+}
+
+.btn-register:hover {
+    background-color: var(--Violet);
+    color: whitesmoke;
+    border: whitesmoke 1px solid;
+}
+
+
+/* FOOTER */
+footer {
+    left: 275px;
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution {
+    font-size: 10px;
+    font-family: var(--font-headings);
+    color: blanchedalmond;
+
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--white-smoke);
+}
