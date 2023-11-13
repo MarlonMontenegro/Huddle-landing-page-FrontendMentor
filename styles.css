@@ -61,33 +61,34 @@ header img {
 }
 
 .mockups-hero img {
-    height: 275px;
+    height: 365px;
     width: auto;
-    padding: 5px;
+    padding: 10px;
 }
 
 .hero {
-    padding-top: 5px;
+    padding-top: 10px;
 }
 
 .hero h1 {
-    font-size: 25px;
+    font-size: 40px;
     margin: 10px;
     font-family: var(--font-headings);
     padding-right: 100px;
 }
 
 .hero p {
-    font-size: 11px;
+    font-size: 18px;
     padding-bottom: 10px;
+    padding-right: 60px;
+    padding-top: 15px;
     margin: 10px;
-    padding-right: 73px;
     font-family: var(--font-body);
 
 }
 
 .social-icons svg {
-    width: 12px;
+    width: 25px;
     height: auto;
 }
 
@@ -95,8 +96,7 @@ header img {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding-top: 49px;
-    padding-right: 15px;
+    padding-top: 150px;
 }
 
 .svg-icon {
@@ -105,14 +105,13 @@ header img {
 }
 
 .svg-icon:hover {
-    width: 18px;
+    width: 30px;
     height: auto;
     fill: var(--Soft-Magenta);
     border-color: var(--Soft-Magenta);
 }
 
 .social-icons li svg {
-
     color: red;
     margin: 5px;
     padding: 5px;
@@ -127,8 +126,9 @@ header img {
     font: var(--font-body);
     border-radius: 20px;
     border: 0;
-    font-size: 12px;
-    width: 120px;
+    height: 40px;
+    font-size: 17px;
+    width: 150px;
     padding: 8px;
     color: var(--Violet);
     transition: background-color 10ms ease;
@@ -144,13 +144,13 @@ header img {
 /* FOOTER */
 
 footer {
-    left: 300px;
+    left: 500px;
     position: absolute;
     bottom: 0;
 }
 
 .attribution {
-    font-size: 9px;
+    font-size: 15px;
     font-family: var(--font-headings, sans-serif);
     color: blanchedalmond;
 }
@@ -158,6 +158,12 @@ footer {
 .attribution a {
     text-decoration: none;
     color: var(--white-smoke);
+    transition: color 2ms ease;
+}
+
+.attribution a:hover {
+    color: var(--Soft-Magenta);
+    font-size: 16px;
 }
 
 
@@ -203,6 +209,7 @@ footer {
         padding-right: 35px;
 
     }
+
     .social-icons ul {
         justify-content: center;
         padding-right: 100px;
@@ -211,7 +218,8 @@ footer {
 
     .btn-register {
         width: 50%;
-        margin: 15px 50px; /
+        margin: 15px 50px;
+    /
     }
 
 
