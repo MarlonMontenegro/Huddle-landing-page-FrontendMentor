@@ -3,9 +3,7 @@
 /* FONTS HEADINGS (POPPINS 400, 600) FONT BODY (OPEN SANS 400) */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,600;1,400&display=swap');
 
-
 :root {
-
     /* COLORS PRIMARY*/
     --Violet: hsl(257, 40%, 49%);
     --Soft-Magenta: hsl(300, 69%, 71%);
@@ -16,15 +14,10 @@
     --font-body: 'Open Sans', sans-serif;
 }
 
-
 /* GLOBAL STYLES */
 
-h1 {
-    font-family: var(--font-headings);
-}
-
-p {
-    font-family: var(--font-body);
+h1, p {
+    font-family: var(--font-headings, sans-serif);
 }
 
 body {
@@ -36,7 +29,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
 }
 
 li {
@@ -66,14 +58,12 @@ header img {
     padding: 45px;
     max-width: 1200px;
     max-height: 50px;
-
 }
 
 .mockups-hero img {
     height: 275px;
     width: auto;
     padding: 5px;
-
 }
 
 .hero {
@@ -83,45 +73,52 @@ header img {
 .hero h1 {
     font-size: 25px;
     margin: 10px;
+    font-family: var(--font-headings);
+    padding-right: 100px;
 }
 
 .hero p {
     font-size: 11px;
     padding-bottom: 10px;
     margin: 10px;
+    padding-right: 73px;
+    font-family: var(--font-body);
+
 }
 
 .social-icons svg {
-    width: 15px;
+    width: 12px;
     height: auto;
 }
 
 .social-icons ul {
     display: flex;
     flex-direction: row;
-    justify-content: right;
-
+    justify-content: flex-end;
+    padding-top: 49px;
+    padding-right: 15px;
 }
 
-.svg-icon{
+.svg-icon {
     fill: #f3f3f3;
     transition: width 3ms ease;
 }
 
-.svg-icon:hover{
+.svg-icon:hover {
     width: 18px;
     height: auto;
+    fill: var(--Soft-Magenta);
+    border-color: var(--Soft-Magenta);
 }
 
 .social-icons li svg {
+
     color: red;
     margin: 5px;
     padding: 5px;
     border: 1px solid white;
     border-radius: 25px;
 }
-
-
 
 /* BUTTON STYLE */
 
@@ -136,30 +133,89 @@ header img {
     color: var(--Violet);
     transition: background-color 10ms ease;
     margin: 10px;
+    box-shadow: -1px 2px 12px 2px rgba(0, 0, 0, 0.53);
 }
 
 .btn-register:hover {
-    background-color: var(--Violet);
+    background-color: var(--Soft-Magenta);
     color: whitesmoke;
-    border: whitesmoke 1px solid;
 }
 
-
 /* FOOTER */
+
 footer {
-    left: 275px;
+    left: 300px;
     position: absolute;
     bottom: 0;
 }
 
 .attribution {
-    font-size: 10px;
-    font-family: var(--font-headings);
+    font-size: 9px;
+    font-family: var(--font-headings, sans-serif);
     color: blanchedalmond;
-
 }
 
 .attribution a {
     text-decoration: none;
     color: var(--white-smoke);
+}
+
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width: 375px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        padding-right: 250px;
+        width: 125px;
+        height: auto;
+    }
+
+    .mockups-hero img {
+        height: 175px;
+        width: auto;
+        padding: 5px 5px 35px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .hero h1 {
+        font-size: 20px;
+        text-align: center;
+        padding-right: 35px;
+    }
+
+    .hero p {
+        font-size: 12px;
+        text-align: center;
+        padding-top: 5px;
+        padding-right: 35px;
+
+    }
+    .social-icons ul {
+        justify-content: center;
+        padding-right: 100px;
+        padding-top: 15px;
+    }
+
+    .btn-register {
+        width: 50%;
+        margin: 15px 50px; /
+    }
+
+
+    footer {
+        display: none;
+    }
 }
